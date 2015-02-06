@@ -1,33 +1,5 @@
 (function(){
 
-	// refactor rectangle methods as part of the prototype, will help performance
-	// refactor player methods as part of prototype
-	
-	// if player dies too quickly after blowing up a block the timeout to remove the containing rectangle
-	// doesn't happen quick enough. Therefore the splice happens after the level has been reset, splicing out
-	// rectangles seemingly starting from the last one.
-	
-	// remove level alert click function from the canvas after the above is fixed.
-	
-	// add a jquery cache?
-	
-	// need to lighten background on last level
-	// need to make another level
-	
-	// introduce a terminal velocity for long falls
-		// seems to be ok for now
-	
-	// need to make sure all rectangle dimensions are a multiple of the mini squares
-		// mini square height and width will be 10.
-	
-	
-	// There is a rough form of MVC here. togglescreens functions as control, floating div and canvas are
-	// the views and the rest of the game is the model. The implementation is basic and disorganized. There are
-	// many calls happening back and forth. It is easy to lose track of data and the application's state.
-	// Makes much more sense to have a framework that allows calls to update model and view in a clean and
-	// compartmentalized way.
-	
-	
 	
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
@@ -136,8 +108,8 @@
 	
 	},false);
 	
-	var jump1 = new Audio("jump17.wav");
-	var jump2 = new Audio("jump16.wav");
+	var jump1 = new Audio("Jump17.wav");
+	var jump2 = new Audio("Jump16.wav");
 	var explosion_sound = new Audio("explosion1.wav");
 	
 	var explosion =  new Audio();
